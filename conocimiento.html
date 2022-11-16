@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="./css/conocimiento.css">
+    <title>Prueba de conocimiento</title>
+</head>
+
+<body>
+    <!--Intentar no dejar espacion en la practica con operadores logicos-->
+    <nav>
+        <a href="./index.html">Volver</a>
+        <img src="./img/logo.png" alt="">
+    </nav>
+    <div class="contenido">
+  
+    <form>
+
+        <!--Primera Pregunta-->
+        <div class="form-group">
+            <h1>PRUEBA DE CONOCIMIENTO</h1>
+            <label>¿Qué compone un grafo?</label><br>
+
+            <select class="form-control" id="grafo" name="grafo">
+                <option value="0">Seleccione una opción</option>
+                <option value="1">Nodos y aristas</option>
+                <option value="2">Atomos y aristas</option>
+                <option value="3">Propiedad y colección</option>
+                <option value="4">Todas las anteriores</option>
+                </select>   
+
+        </div>
+
+
+        <!--Segunda Pregunta-->
+        <div class="form-group">
+            <label>¿En las bases de datos NOSQL qué es Redis?</label><br>
+
+            <select class="form-control" id="second" name="second">
+                <option value="0">Seleccione una opcion</option>
+                <option value="1">Es un framework de trabajo de MongoDB.</option>
+                <option value="2">Es una base de datos no relacional ampliamente utilizada para hacer caché.</option>
+                <option value="3">Es una version mejorada de mongoDB y las bases de datos NOSQL.</option>
+                <option value="4">Es un gestor de bases de datos NOSQL derivado de mongoDB.</option>
+            </select>
+        </div>
+
+        <!--Tercera Pregunta-->
+
+        <div class="form-group">
+            <label>En los tipos de bases de datos, la familia de columnas sirve para:</label><br>
+
+
+            <select id="datebd" class="form-control"name="bd">
+                <option value="0">Seleccione una opcion</option>
+                <option value="1">guardar datos en grupos.</option>
+                <option value="2">tener un identificador único en cada documento.</option>
+                <option value="3">ordenar los valores según su clave.</option>
+                <option value="4">Realizar consultas eficientes a través de los nodos.</option>
+            </select>
+        </div>
+
+        <!--Cuarta Pregunta-->
+        <div class="form-group">
+            <label>¿Cuales son los componentes de Mongodb?</label><br>
+
+            <select id="componentes" class="form-control">
+                <option value="0">Seleccione una opcion</option>
+                <option value="1">Base de datos</option>
+                <option value="2">Colección</option>
+                <option value="3">Documento</option>
+                <option value="4">Representación binaria</option>
+                <option value="5">Todas las anteriores</option>
+            </select>
+        </div>
+
+        <!--Quinta Pregunta-->
+
+        <div class="form-group">
+            <label>En las bases de datos relacionales están las: Tablas, Filas, Columnas y Clave principal
+                entre otros; En bases de datos
+                no relacionales a que se asemejan estos términos</label><br>
+
+            <select id="bdnor" class="form-control" >
+                <option value="0">Seleccione una opcion</option>
+                <option value="1">Documentos, Filas, primary key, campos. </option>
+                <option value="2">Colecciones, Campos, id, valores.</option>
+                <option value="3">Colecciones, documentos, archivos, objectId.</option>
+                <option value="4">Tablas, propiedades, colecciones, documentos..</option>
+            </select>
+           
+        </div>
+
+        <h1>PRACTICA</h1>
+        <div class="form-group">
+            <label>1. Digite la sintaxis correcta para la coleccion "profes" donde el nombre sea tatiana o Andres:</label><br>
+            <input type="text" class="form-control" id="pr1">
+            <p id="con1"></p>
+        </div>
+
+        <div class="form-group">
+            <label>2. Si estamos usando la base de datos "perros", ¿Cuales serian los pasos para eliminar la base de datos "hospital"?: </label><br>
+            <p>Primer paso:</p>
+            <input type="text" class="form-control" id="pr2">
+            <p>Segundo paso:</p>
+            <input type="text" class="form-control" id="pr22">
+            <p id="con2"></p>
+        </div>
+
+        <div class="form-group">
+            <label>3. Se desea añadir el file titulo con el valor "el gato negro" a la colección libro donde el _id:1. Seleccione la opción correcta: </label><br>
+            <input id="pr3" class="form-control">
+            <p id="con3"></p>
+        </div>
+
+        <div class="form-group">
+            <label>4. Se desea ordenar la coleccion "ficha" el file _id de manera descendente:</label><br>
+            <input id="pr4" class="form-control">    
+            <p id="con4"></p>       
+        </div>
+
+        <div class="form-group">
+            <label>5. La sintaxis correcta del método update () es:</label><br>
+            <select id="pr5" class="form-control">
+                <option value="0">Seleccione una opcion</option>
+                <option value="1">db.update.collection({$set: {file:value}}, {file:value}) </option>
+                <option value="2">update({file:name_collection}) </option>
+                <option value="3">db.collectionname.update({file:value}, {$set: {file:value}}) </option>
+                <option value="4"> update({file:value}, {$set: {file:value}}.sort{file:-1})</option>
+            </select>
+            <p id="con5"></p>
+           
+        </div>
+        
+        
+
+       
+    </form>
+    <div class="wrap">
+        <button id="responder" class="button">Responder</button>
+      </div>
+
+</div>
+
+<script src="./js/validator.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.all.min.js"></script>
+</body>
+
+</html>
